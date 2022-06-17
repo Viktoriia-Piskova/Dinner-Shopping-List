@@ -4,7 +4,9 @@
   font-family: "Roboto", sans-serif;
 }
 
-*{transition: all .1s ease-in;}
+* {
+  transition: all 0.1s ease-in;
+}
 
 body {
   background-color: #3b3f45;
@@ -52,9 +54,18 @@ main li {
   background-color: #88839e;
 }
 
-li p{
-    display: block;
-    padding: 12px;
+li p {
+  display: block;
+  padding: 12px;
+}
+
+.li-comment {
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+.li-comment::before {
+  content: " ";
 }
 
 ul li:hover {
@@ -63,64 +74,69 @@ ul li:hover {
   border-bottom: solid 2px white;
 }
 
-ul li:active{
-    background-color: #FF8984;
+ul li:active {
+  background-color: #ff8984;
 }
 
-li>label{
-    color: white;
+li > label {
+  color: white;
 }
 
-input[type="checkbox"]{
-    position: absolute;
-    z-index: -99;
+input[type="checkbox"] {
+  position: absolute;
+  z-index: -99;
 }
 
 /* styles for checkboxes with special effects */
 
-ul li label>p::before {
-    content: "";
-    width: 19px;
-    height: 19px;
-    background-color: white;
-    display: inline-block;
-    margin-right: 12px;
+ul li label > p::before {
+  content: "";
+  width: 19px;
+  height: 19px;
+  background-color: white;
+  display: inline-block;
+  margin-right: 12px;
 }
 
-input[type="checkbox"]:checked ~ p{
-    text-decoration: line-through #9B96AC 2px;
-    color: #9B96AC;
+input[type="checkbox"]:checked ~ p {
+  text-decoration: line-through #9b96ac 2px;
+  color: #9b96ac;
 }
 
+input[type="checkbox"]:checked ~ p {
+    box-shadow: 0px 6px 4px 0px rgb(0 0 0 / 30%);
+    position: relative;
 
-ul li input:checked~p::before {
-    content: "";
-    width: 19px;
-    height: 19px;
-    background-image: url(img/check-mark.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-    margin-right: 12px;
+}
+
+ul li input:checked ~ p::before {
+  content: "";
+  width: 19px;
+  height: 19px;
+  background-image: url(img/check-mark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  margin-right: 12px;
 }
 
 /* styles for button with special effects */
 
 button {
-    display: block;
-    width: 534px;
-    height: 45px;
-    background: #4a4f56;
-    margin: 25px auto 45px;
-    color: #FF8984;
-    border: none
+  display: block;
+  width: 534px;
+  height: 45px;
+  background: #4a4f56;
+  margin: 25px auto 45px;
+  color: #ff8984;
+  border: none;
 }
 
-button:hover{
-    background: #88839e;
+button:hover {
+  background: #88839e;
 }
 
-button:active{
-    background: #FF8984;
-    color: #4a4f56 ;
+button:active {
+  background: #ff8984;
+  color: #4a4f56;
 }
